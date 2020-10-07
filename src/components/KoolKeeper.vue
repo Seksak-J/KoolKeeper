@@ -1,14 +1,15 @@
 <template>
   <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand href="#">KoolKeeper</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item href="">Document</b-nav-item>
+        <b-nav-item href="#">Search</b-nav-item>
+        <b-nav-item href="#">Search Type</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -17,22 +18,8 @@
           <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
           <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
         </b-nav-form>
-
-        <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template v-slot:button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown>
+        <b-nav-item href="">Preferences</b-nav-item>
+        <b-nav-item href="">Sign Out</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -45,25 +32,14 @@ export default {
   props: {
     aaa: String
   },
-   data() {
-      return {
-        sortBy: 'age',
-        sortDesc: false,
-        fields: [
-          { key: 'Name', sortable: true },
-          { key: 'Size', sortable: true },
-          { key: 'Version', sortable: true },
-          { key: 'Modifier', sortable: true },
-          { key: 'Modified Date', sortable: true },
-          { key: 'Format', sortable: true }
-        ],
-        items: [
-          { Name: 'Seksak', size: 40, Version: 1.0,Modifier:'Boom', ModifierDate: '17/09/2020',Format: 'dsadsa' }
-        ]
-      }
-    }
+   
 }
 </script>
 <style>
-
+.bg-info {
+    background-color: #17a2b8 !important;
+    line-height: 2.5;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 </style>
